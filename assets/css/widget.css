@@ -1,0 +1,116 @@
+@charset 'utf-8';
+.widget{margin:0 0 31px; border:1px solid #e0e0e0; border-radius:30px; overflow:hidden;}
+
+.uteka-widget {
+    /* Минимально поддерживаемые размеры виджета: 320x520. */
+    width: 100%;
+    height: 768px;
+    max-height:100vh;
+  }
+
+  @media (max-width: 767px) {
+    .widget{margin:0 0 20px;}
+
+    .uteka-widget {
+      height: 65vh;
+      min-height:250px;
+    }
+  }  
+  
+  .uteka-widget iframe {
+    border: none;
+    width: 100%;
+    height: calc(100% - 57px);
+  }
+  
+  .uteka-widget__container {
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  
+  @media (min-width: 600px) {
+    .uteka-widget__container {
+      padding: 0 20px;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .uteka-widget__container {
+      padding: 0 40px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .uteka-widget__container {
+      padding: 0 44px;
+    }
+  }
+  
+  @media (min-width: 1440px) {
+    .uteka-widget__container {
+      padding: 0 60px;
+      max-width: 1440px;
+    }
+  }
+  
+  .uteka-widget-header {
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .uteka-widget-header__inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 56px;
+  }
+  
+  .uteka-widget-header__title {
+    background: url('https://widget.uteka.ru/static/img/widgets/title_2@mobile.svg') no-repeat;
+    background-position: center;
+    width: 230px;
+    height: 24px;
+  }
+  
+  .uteka-widget-header__logo {
+    height: 16px;
+  }
+  
+  .uteka-widget-header__logo img {
+    height: 100%;
+  }
+  
+  .uteka-widget-header__close {
+    position: absolute;
+    top: 0;
+    right: -8px;
+    bottom: 0;
+    z-index: 5;
+    margin: auto;
+    width: 32px;
+    height: 32px;
+    background: url('https://widget.uteka.ru/static/img/widgets/close_2.svg') no-repeat center;
+  }
+  
+  @media (min-width: 1024px) {
+    .uteka-widget-header__inner {
+      flex-direction: row;
+    }
+  
+    .uteka-widget-header__title {
+      background-image: url('https://widget.uteka.ru/static/img/widgets/title_2.svg');
+      width: 264px;
+      height: 24px;
+    }
+  
+    .uteka-widget-header__logo {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+      height: 32px;
+    }
+  }

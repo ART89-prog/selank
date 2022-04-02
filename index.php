@@ -14,10 +14,13 @@
 					<div class="main-info__left" data-aos="fade-up-right" data-aos-duration="1000" data-aos-delay="1200">
 						<h2 class="main-info__title"><span class="main-info__mob-text-1"><?php the_field('first_screen_title_1'); ?></span> <span class="main-info__mob-text-2"><?php the_field('first_screen_title_2'); ?></span> <span class="main-info__green-text"><span class="main-info__mob-text-3"><?php the_field('first_screen_title_3'); ?></span> <span class="main-info__mob-text-4"><?php the_field('first_screen_title_4'); ?></span></span></h2>
 						<div class="without-receipt">
-							<span class="without-receipt__button">
+							<!-- <span class="without-receipt__button">
 								<span class="without-receipt__text"><?php the_field('first_screen_button'); ?></span>
-							</span>
+							</span> -->
 							<span class="without-receipt__line" data-aos="fade" data-aos-duration="800" data-aos-delay="2000"></span>
+							<a class="header__button button js-scrolltoid btn_where_to_buy" href="<?php the_field('header_orange_button_url'); ?>">
+								<span class="button__text"><?php the_field('header_orange_button_text'); ?></span>
+							</a>   
 						</div>
 					</div>
 					<div class="main-info__center" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1200">
@@ -67,6 +70,12 @@
 												</div>
 											</div>
                                     	</li> 
+
+																																								
+										<div class="main-info__right-text">Отпускается без рецепта</div>
+										<div class="main-info__line"></div>
+										
+									
 									<?php } elseif (get_field('advantage_type') == 'График') { ?>
 
 									<?php } ?>															
@@ -189,6 +198,8 @@
 
 	<!-- BEGIN FOURTH SCREEN -->
 	<div class="fourth-screen">
+		<div class="doctors__bg" data-bg="<?php echo bloginfo('template_directory'); ?>/assets/img/fourth-screen__center.png" data-aos="fade" data-aos-duration="800" data-paroller-factor="0.02"  data-paroller-type="foreground" data-paroller-direction="vertical" data-paroller-transition="transform 1s ease-out"></div>
+
 		<div class="fourth-screen__main wrapper">
 
 			<div class="doctors">
@@ -221,7 +232,7 @@
      										$doctor_work = get_field("doctor_work"); 
 										?>																							
 										<h4 class="doctors__title"><?php the_field('doctor_fio'); ?> <?php if ($doctor_work) : ?><br> <span class="doctors__work"><?php the_field('doctor_work'); ?></span><?php endif; ?></h4>
-										<div class="doctors__line"></div>
+										<!-- <div class="doctors__line"></div> -->
 										<div class="doctors__max-wrap js-max">
 											<div class="doctors__max-content js-max-fix">
 												<div class="doctors__text js-max-content"><?php the_field('doctor_description', false, false); ?></div>                                            
@@ -236,7 +247,7 @@
 						wp_reset_postdata();
 					?>					
 				</div>
-				<div class="doctors__bg" data-bg="<?php echo bloginfo('template_directory'); ?>/assets/img/fourth-screen__center.png" data-aos="fade" data-aos-duration="800" data-paroller-factor="0.02"  data-paroller-type="foreground" data-paroller-direction="vertical" data-paroller-transition="transform 1s ease-out"></div>
+				<!-- <div class="doctors__bg" data-bg="<?php echo bloginfo('template_directory'); ?>/assets/img/fourth-screen__center.png" data-aos="fade" data-aos-duration="800" data-paroller-factor="0.02"  data-paroller-type="foreground" data-paroller-direction="vertical" data-paroller-transition="transform 1s ease-out"></div> -->
 				<div class="doctors__bg-mob" data-bg="<?php echo bloginfo('template_directory'); ?>/assets/img/fourth-screen__center-mob.png"></div>
 			</div>
 			
@@ -716,7 +727,9 @@
 		<div class="seventh-screen__main wrapper">
 			
 			<div class="quality js-aos-container">
-
+				<div class="seventh-screene__top" data-aos="fade" data-aos-duration="800" data-delay="300">
+					<h3 class="seventh-screen__title">гарантии качества</h3>
+				</div>			
 				<?php
 					$posts = get_posts( array(
 						'numberposts' => -1,
@@ -734,9 +747,21 @@
 					foreach( $posts as $post ){
 						setup_postdata($post);
 						?>
+							
 							<?php if (get_field('warranty_popup') == 'Нет') { ?>
 								<div class="quality__item js-aos-item" data-aos-duration="800">
+									
 									<div class="quality__cols">					
+										<div class="quality__col">
+											<a class="quality__image-link" data-fancybox="" href="https://localhost/selank/wp-content/uploads/2021/07/Sertifikat-GMP.jpg">
+												<img class="quality__image" src="https://localhost/selank/wp-content/uploads/2021/07/Sertifikat-GMP-small.jpg" data-lazy="https://localhost/selank/wp-content/uploads/2021/07/Sertifikat-GMP-small.jpg" alt="">
+											</a>
+										</div>
+										<div class="quality__col aos-init aos-animate" data-aos="fade" data-aos-duration="800" data-aos-delay="200">
+											<div class="quality__text"><p>Качество Селанка гарантировано производством по мировым стандартам GMP и подтверждено официальными документами</p></div>
+										</div>
+									</div>		
+									<div class="quality__cols">	
 										<div class="quality__col">
 											<img class="quality__image" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-lazy="<?php the_field('warranty_image'); ?>" alt="">
 										</div>
@@ -744,23 +769,24 @@
 											<div class="quality__text"><?php the_field('warranty_content', false, false); ?></div>
 										</div>
 									</div>
-								</div>								
-							<?php } elseif (get_field('warranty_popup') == 'Да') { ?>
-								<div class="quality__item js-aos-item" data-aos-duration="800">
+
 									<div class="quality__cols">					
 										<div class="quality__col">
-											<a class="quality__image-link" data-fancybox href="<?php the_field('warranty_image_full'); ?>">
-												<img class="quality__image" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-lazy="<?php the_field('warranty_image'); ?>" alt="">
+											<a class="quality__image-link" data-fancybox="" href="https://localhost/selank/wp-content/uploads/2021/07/Sertifikat-GMP.jpg">
+												<img class="quality__image" src="https://localhost/selank/wp-content/uploads/2021/07/Sertifikat-GMP-small.jpg" data-lazy="https://localhost/selank/wp-content/uploads/2021/07/Sertifikat-GMP-small.jpg" alt="">
 											</a>
 										</div>
-										<div class="quality__col" data-aos="fade" data-aos-duration="800" data-aos-delay="200">
-											<div class="quality__text"><?php the_field('warranty_content', false, false); ?></div>
+										<div class="quality__col aos-init aos-animate" data-aos="fade" data-aos-duration="800" data-aos-delay="200">
+											<div class="quality__text"><p>Качество Селанка гарантировано производством по мировым стандартам GMP и подтверждено официальными документами</p></div>
 										</div>
-									</div>
-								</div>
-							<?php } elseif (get_field('warranty_popup') == 'График') { ?>
+									</div>	
 
-							<?php } ?>															
+								
+
+								</div>								
+							
+
+							<?php } ?>															 
 						<?php
 					}
 

@@ -22,6 +22,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_directory'); ?>/assets/css/main.css">  
     <link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_directory'); ?>/assets/css/aos.css">  
     <link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_directory'); ?>/assets/css/widget.css">  
+    <link rel="stylesheet" type="text/css" href="<?php echo bloginfo('template_directory'); ?>/assets/css/main2.css"> 
     <?php
         wp_head();
     ?>
@@ -53,9 +54,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <a class="header__button button button_green-border js-scrolltoid" href="<?php the_field('header_green_button_url'); ?>">
                     <span class="button__text"><?php the_field('header_green_button_text'); ?></span>
                 </a>
-                <a class="header__button button js-scrolltoid btn_where_to_buy" href="<?php the_field('header_orange_button_url'); ?>">
+                <!-- <a class="header__button button js-scrolltoid btn_where_to_buy" href="<?php the_field('header_orange_button_url'); ?>">
                     <span class="button__text"><?php the_field('header_orange_button_text'); ?></span>
-                </a>                        
+                </a>                         -->
             </div>
         </div>
     </div>

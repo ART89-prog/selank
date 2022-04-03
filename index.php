@@ -21,6 +21,7 @@
 							<a class="header__button button js-scrolltoid btn_where_to_buy" href="<?php the_field('header_orange_button_url'); ?>">
 								<span class="button__text"><?php the_field('header_orange_button_text'); ?></span>
 							</a>   
+							<div class="main-info__right-text-mob">Без рецепта</div>
 						</div>
 					</div>
 					<div class="main-info__center" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1200">
@@ -729,8 +730,66 @@
 			<div class="quality js-aos-container">
 				<div class="seventh-screene__top" data-aos="fade" data-aos-duration="800" data-delay="300">
 					<h3 class="seventh-screen__title">гарантии качества</h3>
-				</div>			
-				<?php
+				</div>
+				<div class="quality_items">
+					<div class="quality_item">
+						<a class="quality_item-link" data-fancybox="" href="https://localhost/selank/wp-content/uploads/2021/07/Sertifikat-GMP.jpg">
+							<img class="quality__image" src="https://localhost/selank/wp-content/uploads/2021/07/Sertifikat-GMP-small.jpg" data-lazy="https://localhost/selank/wp-content/uploads/2021/07/Sertifikat-GMP-small.jpg" alt="">
+						</a>
+						<div class="quality_item-text">
+							Гарантия соответствия продукции мировым стандартам подтверждена сертификатом международного уровня качества GMP 
+						</div>
+					</div>
+					<div class="quality_item">
+						<div class="quality_item-link">
+							<img class="quality__image" src="https://localhost/selank/wp-content/uploads/2021/06/seventh-screen__quality.png" data-lazy="https://localhost/selank/wp-content/uploads/2021/06/seventh-screen__quality.png" alt="">
+						</div>
+						<div class="quality_item-text">
+							В составе Селанка  только естественные аминокислоты
+						</div>
+					</div>
+					<div class="quality_item">
+						<a class="quality_item-link" data-fancybox="" href="https://localhost/selank/wp-content/uploads/2021/07/Sertifikat-GMP.jpg">
+							<img class="quality__image" src="https://localhost/selank/wp-content/uploads/2021/07/Sertifikat-GMP-small.jpg" data-lazy="https://localhost/selank/wp-content/uploads/2021/07/Sertifikat-GMP-small.jpg" alt="">
+						</a>
+						<div class="quality_item-text">
+							Гарантия соответствия продукции мировым стандартам подтверждена сертификатом международного уровня качества GMP 
+						</div>
+					</div>
+				</div>
+				<div class="quality_items-mob">				
+					<div class="quality_item">
+						<div class="quality_item-link">
+							<img class="quality__image" src="https://localhost/selank/wp-content/uploads/2021/06/seventh-screen__quality.png" data-lazy="https://localhost/selank/wp-content/uploads/2021/06/seventh-screen__quality.png" alt="">
+						</div>
+						<div class="quality_item-text">
+							В составе Селанка  только естественные аминокислоты
+						</div>
+					</div>
+					<div class="quality_item">
+						<div class="quality_item-sert">
+							<a class="quality_item-link" data-fancybox="" href="https://localhost/selank/wp-content/uploads/2021/07/Sertifikat-GMP.jpg">
+								<img class="quality__image" src="https://localhost/selank/wp-content/uploads/2021/07/Sertifikat-GMP-small.jpg" data-lazy="https://localhost/selank/wp-content/uploads/2021/07/Sertifikat-GMP-small.jpg" alt="">
+							</a>
+							<a class="quality_item-link" data-fancybox="" href="https://localhost/selank/wp-content/uploads/2021/07/Sertifikat-GMP.jpg">
+								<img class="quality__image" src="https://localhost/selank/wp-content/uploads/2021/07/Sertifikat-GMP-small.jpg" data-lazy="https://localhost/selank/wp-content/uploads/2021/07/Sertifikat-GMP-small.jpg" alt="">
+							</a>	
+						</div>						
+						<div class="quality_item-text">
+							Гарантия соответствия продукции мировым стандартам подтверждена сертификатом международного уровня качества GMP 
+						</div>
+					</div>
+				</div>
+				
+
+
+
+
+
+
+
+
+				<!-- <?php
 					$posts = get_posts( array(
 						'numberposts' => -1,
 						'category_name'    => 'warranty',
@@ -791,7 +850,7 @@
 					}
 
 					wp_reset_postdata();
-				?>	
+				?>	 -->
 
 			</div>
 

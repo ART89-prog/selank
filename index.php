@@ -233,12 +233,11 @@
      										$doctor_work = get_field("doctor_work"); 
 										?>																							
 										<h4 class="doctors__title"><?php the_field('doctor_fio'); ?> <?php if ($doctor_work) : ?><br> <span class="doctors__work"><?php the_field('doctor_work'); ?></span><?php endif; ?></h4>
-										<!-- <div class="doctors__line"></div> -->
 										<div class="doctors__max-wrap js-max">
 											<div class="doctors__max-content js-max-fix">
 												<div class="doctors__text js-max-content"><?php the_field('doctor_description', false, false); ?></div>                                            
 											</div>
-											<a class="doctors__max-button js-max-open" href="javascript:void(0);"></a>
+											<a class="doctors__max-button js-max-open" href="javascript:void(0);">Показать еще</a>
 										</div>
 									</div>
 								</article>								

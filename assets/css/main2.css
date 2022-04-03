@@ -251,6 +251,23 @@
 
 
 
+@media screen and (max-width:1400px){
+  .doctors {
+    margin: 0;
+  }
+  .doctors__photo {
+    max-width: 322px;
+  }
+  .doctors__item:nth-child(3) .doctors__photo {
+    margin-bottom: -149px;
+  }
+  .doctors__item:nth-child(2) {
+    margin-right: 100px;
+  }
+  .doctors__item:nth-child(3) .doctors__photo {
+    margin-right: -60px;
+  }
+}
 
 @media screen and (max-width:1200px){
   .main-chars {
@@ -271,7 +288,6 @@
     max-width: 983px;
   }
 
-
 }
 
 
@@ -279,12 +295,32 @@
   .main-chars {
     max-width: 350px;
   }
-  .protection__list {
+  /* .protection__list {
     max-width: 100%;
+    margin-left: -30px;
   }
+  .protection__list > * {
+    margin-left: 30px;
+    width: calc(100%/3 - 30px);
+  } */
   .seventh-screen__title {
     font: 800 36px/46px 'Montserrat', sans-serif;
   }
+  .doctors__item:nth-child(3) .doctors__photo {
+    bottom: 0;
+  }
+  .doctors__item,
+  .doctors__item:nth-child(1),
+  .doctors__item:nth-child(2),
+  .doctors__item:nth-child(3) {
+    width: 32%;
+    margin: 0 !important;
+    padding: 0 15px 30px;
+  }
+  .doctors__text p:last-child {
+    width: 100%;
+  }
+ 
 }
 
 @media screen and (max-width:1023px) {
@@ -376,6 +412,21 @@
     width: 50%;
     margin: 0 auto;
   }
+  .main-picture__image-mob {
+    width: 165px;
+  }
+  .main-picture {
+    bottom: 40px;
+  }
+  .protection__picture {
+    width: 163px;
+    top: 0;
+    right: -44px;
+  }
+  .second-screen__title {
+    width: 248px;
+    padding: 0px 0 0 37px;
+  }
 }
 
 
@@ -398,21 +449,7 @@
   .main-info__green-text {
     font: 800 23px/54px 'Montserrat', sans-serif;
   }
-  .main-picture__image-mob {
-    width: 165px;
-  }
-  .main-picture {
-    bottom: 40px;
-  }
-  .protection__picture {
-    width: 163px;
-    top: 0;
-    right: -44px;
-  }
-  .second-screen__title {
-    width: 248px;
-    padding: 0px 0 0 37px;
-  }
+
   .seventh-screen__title {
     font: 800 26px/33px 'Montserrat', sans-serif;
     padding-bottom: 28px;
@@ -420,6 +457,9 @@
   .quality_item-text {
     font-size: 14px;
     line-height: 22px;
+  }
+  .doctors__list {
+    padding: 0;
   }
 
 
@@ -460,6 +500,12 @@
   }
   .quality_item-text {
     width: 100%;
+  }
+  .main-chars__item {
+    margin: 0 0 4px;
+  }
+  .main-chars__item {
+    font: 500 12px/18px 'Montserrat', sans-serif;
   }
 
 

@@ -42,16 +42,52 @@
 .main-chars__item {
   margin: 0 0 28px;
 }
-
-.main-info__right-text {
-  display: inline-block;
+.main-chars__item:nth-child(4):before {
+  display: none !important;
+  content: "";
+  color: transparent;
+}
+.main-chars__item:last-child {
   font-weight: 600;
   font-size: 20px;
-  line-height: 29px;
+  line-height: 24px;
   color: #4A4A4A;
-  margin-left: 72px;
   border-bottom: 1px dashed #4A4A4A;
   margin-bottom: 14px;
+  font-family: 'Montserrat';
+  font-style: normal;
+}
+.main-info__right-text .main-chars__text {
+  border-left: none;
+  padding: 0 0 0 74px;
+}
+.main-info__right-text .main-chars__inner {
+  padding: 0;
+}
+.main-info__right-text .main-chars__inner .main-chars__bg.aos-init.aos-animate {
+  display: none !important;
+  background: transparent;
+}
+.main-info__right-text .main-chars__hidden {
+  margin: 0 0 0 45px;
+  display: none;
+  position: relative;
+  padding: 15px;
+  background: #fff;
+  border-radius: 30px;
+  z-index: 3;
+  font: 14px/25px 'Montserrat', sans-serif;
+  letter-spacing: normal;
+  text-shadow: none;
+  box-shadow: 2px 1px 3px #111;
+}
+.main-info__right-text .main-chars__text a {
+  color: #4a4a4a;
+  border-bottom: 1px dashed #4a4a4a;
+}
+.desktop .main-info__right-text .main-chars__text a:hover {
+  color: #4a4a4a;
+  border-color: transparent;
 }
 .main-info__line {
   max-width: 295px;
@@ -59,7 +95,7 @@
   display: block;
   position: relative;
   z-index: 3;
-  border-bottom: 1px solid #66ccc9;
+  border-bottom: 1px solid rgba(102, 145, 154, 0.5);
 }
 .main-info__line:before {
   content: "";
@@ -68,7 +104,7 @@
   position: absolute;
   top: -69px;
   left: -161px;
-  background: #66ccc9;
+  background: rgba(102, 145, 154, 0.5);
   border-radius: 50%;
 }
 .main-info__line:after {
@@ -77,7 +113,7 @@
   position: absolute;
   bottom: -53px;
   left: -79px;
-  border-left: 1px solid #66ccc9;
+  border-left: 1px solid rgba(102, 145, 154, 0.5);
   -webkit-transform: rotate(-67deg);
   -ms-transform: rotate(-67deg);
   transform: rotate(-67deg);
@@ -118,10 +154,9 @@
 .doctors__bg {
   width: 1690px;
   height: 825px;
-  margin: 0 0 0 0px;
   position: absolute;
   top: -70px;
-  left: 0;
+  left: 25%;
   background-size: 100% 100%;
 }
 .doctors__item:nth-child(1) .doctors__photo {
@@ -188,6 +223,17 @@
 .seventh-screen__top {
   text-align: center;
 }
+.seventh-screen__bg-bottom {
+  width: 1920px;
+  height: 374px;
+  margin: 0 0 0 -960px;
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+}
 .seventh-screen__title {
   font: 800 52px/69px 'Montserrat', sans-serif;
   color: #66ccc9;
@@ -248,7 +294,81 @@
 .quality_items-mob {
   display: none;
 }
+.about-us__title {
+  padding: 0 0 60px;
+  font: 800 52px/67px 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  color: #66ccc9;
+  letter-spacing: 0.06em;
+  max-width: 554px;
+  width: 100%;
+}
 
+.blue-button:before, 
+.blue-button:after {
+  background: linear-gradient(93.07deg, #FEA622 6.23%, #FDC10D 96.31%);
+  box-shadow: 0px 9px 13px rgba(254, 185, 19, 0.24);
+}
+.blue-button {
+  max-width: 100%;
+  height: 57px;
+  margin: 0 0 25px;
+  padding: 0 20px;
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(93.07deg, #FEA622 6.23%, #FDC10D 96.31%);
+  box-shadow: 0px 9px 13px rgba(254, 185, 19, 0.24);
+  border-radius: 40px;
+  font: bold 16px/57px 'Montserrat', sans-serif;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.blue-button:hover {
+  background: linear-gradient(93.07deg, #FEA622 6.23%, #FDC10D 96.31%);
+  box-shadow: 0px 9px 13px rgba(254, 185, 19, 0.24);
+}
+.about-us__image {
+  left: -27px;
+  bottom: 89px;
+}
+.about-us__left {
+  max-width: 560px;
+  margin-right: 15px;
+}
+.about-us__right {
+  width: 530px;
+  position: relative;
+}
+.small-video-2 .small-video__icon {
+  width: 174px;
+  height: 174px;
+  border-radius: 50%;
+  margin: 26px 0 0 -35px;
+  position: absolute;
+  bottom: 0;
+  left: -127px;
+  background: linear-gradient(49.42deg, #9586EF 12.13%, #59A7F2 77.81%);
+  -webkit-transition: 0.3s ease-out;
+  -ms-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+.small-video-2 .small-video__icon:before {
+  content: "";
+  width: 75px;
+  height: 80px;
+  margin: -40px 0 0 -34px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: url(../img/svg/play-button.svg) no-repeat;
+  background-size: 100% 100%;
+}
 
 
 @media screen and (max-width:1400px){
@@ -323,6 +443,28 @@
 .protection__picture {
     width: 60%;
   }
+.about-us__title {
+  padding: 0 0 51px;
+  font: 800 36px/46px 'Montserrat', sans-serif;
+  max-width: 420px;
+  }
+  .about-us__image {
+    left: -64px;
+    bottom: 70px;
+  }
+  .small-video-2 .small-video__icon {
+    width: 140px;
+    height: 140px;
+  }
+  .small-video-2 .small-video__icon:before {
+    width: 60px;
+    height: 65px;
+    margin: -32px 0 0 -28px;
+  }
+  .seventh-screen__bg-bottom {
+    bottom: 60px;
+  }
+
 
  
 }
@@ -429,7 +571,29 @@
   .protection__picture-wrap {
     margin: auto;
     position: relative;
+  }
+  .about-us__title {
+    padding: 0 0 51px;
+    font: 800 32px/40px 'Montserrat', sans-serif;
+    max-width: 370px;
+  }
+  .about-us__image {
+    left: 0px;
+    bottom: 25px;
 }
+  .small-video-2 .small-video__icon {
+    width: 100px;
+    height: 100px;
+    left: 0;
+  }
+  .small-video-2 .small-video__icon:before {
+    width: 39px;
+    height: 46px;
+    margin: -23px 0 0 -18px;
+  }
+  .seventh-screen__bg-bottom {
+    display: none;
+  }
 
 }
 
@@ -489,6 +653,30 @@
     text-decoration-line: underline;
     color: #66CCC9;
     margin-top: 10px;
+  }
+  .about-us__title {
+    font: 800 26px/33px 'Montserrat', sans-serif;
+    max-width: 100%;
+    padding: 0 0 20px;
+  }
+  .about-us__left {
+    max-width: 100%;
+    margin-right: 0px;
+  }
+  .about-us__right {
+    margin: 0 auto;
+  }
+  .about-us__mob {
+    bottom: -35px;
+  }
+  .about-us {
+    padding-bottom: 50px;
+  }
+  .small-video-2 .small-video__icon {
+    width: 100px;
+    height: 100px;
+    left: 145px;
+    margin-top: 71px;
   }
 
 
@@ -591,6 +779,17 @@
   .second-screen__title {
     text-align: center;
   }
+  .about-us__right {
+    width: 320px;
+    position: relative;
+  }
+  .small-video-2 .small-video__icon {
+    width: 80px;
+    height: 80px;
+    left: 58px;
+    margin-top: 84px;
+  }
+
 
 
 }

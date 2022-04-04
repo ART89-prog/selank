@@ -22,6 +22,23 @@
 								<span class="button__text"><?php the_field('header_orange_button_text'); ?></span>
 							</a>   
 							<div class="main-info__right-text-mob">Без рецепта</div>
+							
+							<!-- <div class="main-chars__item js-show-item main-info__right-text-mob">
+								<div class="main-chars__inner">
+									<span class="main-chars__text-wrap">
+										<span class="main-chars__text"><a class="dashed-link js-show-button" href="javascript:void(0);"><?php the_field('advantage_link'); ?></a></span>
+									</span>
+									<span class="main-chars__bg" data-aos="fade" data-aos-duration="800" data-aos-delay="2000" data-aos-offset="-300"></span>
+									<div class="main-chars__hidden js-show-hidden">
+										<div class="main-chars__content">
+											<?php the_field('advantage_hidden'); ?>
+											<a class="main-chars__close js-show-button" href="javascript:void(0);">Свернуть</a>
+										</div>
+									</div>
+								</div>
+							</div> 	 -->
+						
+							
 						</div>
 					</div>
 					<div class="main-info__center" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="1200">
@@ -72,8 +89,23 @@
 											</div>
                                     	</li> 
 
+										<li class="main-chars__item js-show-item main-info__right-text">
+											<div class="main-chars__inner">
+												<span class="main-chars__text-wrap">
+													<span class="main-chars__text"><a class="dashed-link js-show-button" href="javascript:void(0);"><?php the_field('advantage_link'); ?></a></span>
+												</span>
+												<span class="main-chars__bg" data-aos="fade" data-aos-duration="800" data-aos-delay="2000" data-aos-offset="-300"></span>
+												<div class="main-chars__hidden js-show-hidden">
+													<div class="main-chars__content">
+														<?php the_field('advantage_hidden'); ?>
+														<a class="main-chars__close js-show-button" href="javascript:void(0);">Свернуть</a>
+													</div>
+												</div>
+											</div>
+                                    	</li> 
+
 																																								
-										<div class="main-info__right-text">Отпускается без рецепта</div>
+										<!-- <div class="main-info__right-text">Отпускается без рецепта</div> -->
 										<div class="main-info__line"></div>
 										
 									
@@ -550,7 +582,6 @@
 				<div class="about-us__cols">
 					<div class="about-us__left">
 						<h3 class="about-us__title" data-aos="fade-right" data-aos-duration="800"><?php the_field('opinions_title'); ?></h3>
-						<h4 class="about-us__subtitle js-popup-trigger" data-aos="fade-fade" data-aos-duration="800" data-aos-delay="300"><?php the_field('opinions_subtitle'); ?></h4>
 						<div class="about-us__mob" data-aos="fade" data-aos-duration="800" data-aos-delay="300">
 							<a class="about-us__button blue-button js-popup-open js-hidden-button" href="<?php the_field('opinions_button_url'); ?>">
 								<span class="blue-button__text"><?php the_field('opinions_button_text'); ?></span>
@@ -560,6 +591,9 @@
 					<div class="about-us__right" data-aos="fade-left" data-aos-duration="800">
 						<img class="about-us__image js-popup-trigger" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-lazy="<?php echo bloginfo('template_directory'); ?>/assets/img/sixth-screen__picture.png" alt="">
 						<img class="about-us__image-mob js-popup-trigger" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-lazy="<?php echo bloginfo('template_directory'); ?>/assets/img/sixth-screen__picture-mob.png" alt="">						
+						<a class="small-video-2 js-popup-open js-popup-video" data-frame="https://www.youtube.com/embed/gNrBW95AVEQ?autoplay=1" data-width="560" data-height="315" href="#video-popup" data-bg="https://localhost/selank/wp-content/uploads/2021/09/footer__video.jpg.jpg" style="background-image: url(&quot;https://localhost/selank/wp-content/uploads/2021/09/footer__video.jpg.jpg&quot;);">
+                            <span class="small-video__icon"></span>
+                        </a>
 					</div>
 				</div>
 				<div class="about-us__video js-hidden-video">
@@ -853,7 +887,7 @@
 
 			</div>
 
-			<section class="how-to-use" id="how-to-use">
+			<section class="how-to-use" id="how-to-use">				
 				<div class="how-to-use__top" data-aos="fade" data-aos-duration="800" data-delay="300">
 					<h3 class="how-to-use__title"><?php the_field('usage_main_title'); ?></h3>
 				</div>
@@ -887,10 +921,13 @@
 					wp_reset_postdata();
 				?>					
 				</div>
+
 			</section>
 
 		</div>
+
 		<div class="seventh-screen__bg-top" data-bg="<?php echo bloginfo('template_directory'); ?>/assets/img/seventh-screen__bg.png" data-aos="fade" data-aos-duration="1500"  data-paroller-factor="0.01"  data-paroller-type="foreground" data-paroller-direction="vertical" data-paroller-transition="transform 1s ease-out"></div>
+		<div class="seventh-screen__bg-bottom" data-bg="<?php echo bloginfo('template_directory'); ?>/assets/img/seventh-screen__bg.png" data-aos="fade" data-aos-duration="1500"  data-paroller-factor="0.01"  data-paroller-type="foreground" data-paroller-direction="vertical" data-paroller-transition="transform 1s ease-out"></div>
 		<div class="seventh-screen__bg-mob" data-bg="<?php echo bloginfo('template_directory'); ?>/assets/img/seventh-screen__bg-mob.png"></div>
 		<img class="seventh-screen__logo" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" data-lazy="<?php echo bloginfo('template_directory'); ?>/assets/img/svg/seventh-screen__logo.svg" alt=""  data-aos="fade" data-aos-duration="800" data-aos-delay="800" data-paroller-factor="-0.01"  data-paroller-type="foreground" data-paroller-direction="vertical" data-paroller-transition="transform 1s ease-out">
 	</div>
